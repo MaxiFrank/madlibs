@@ -52,10 +52,6 @@ def show_madlib_form():
 
 @app.route('/madlib')
 def show_madlib():
-    print(request.args.getlist('dream'))
-    # I would only get food dream here....
-    print(request.args.get('dream'))
-
     color = request.args.get("color")
     person = request.args.get("person")
     noun = request.args.get("noun")
