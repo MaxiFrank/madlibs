@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<h1>Choose your personalized option</h1>
+
+
+<form action="/madlib">
+  <p>What is your name? <input type="text" name="person"></p>
+  <p>What is your favorite noun? <input type="text" name="noun"></p>
+  <p>What is your adjective? <input type="text" name="adjective"></p>
+  choose your color
+    {% for color in color_list %}
+        <div>
+            <input type="radio" name="color" value={{ color }}>{{ color }}
+            <!-- why do I need {{ color }} twice? the first one is the value in key value pair in immutable multidict, the second one
+            is what the user sees on webpage-->
+        </div>
+    {% endfor %}
+
+    choose your favorite dream?
+    <div>
+        <input type="checkbox" name="dream" value="food dream">food
+        <input type="checkbox" name="dream" value="play dream">play
+        <input type="checkbox" name="dream" value="puppy dream">puppy
+    </div>
+      <input type="submit">
+</form>
+
+</body>
+</html>
